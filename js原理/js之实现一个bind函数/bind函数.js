@@ -17,5 +17,4 @@ var obj = {
     name: 'John'
 };
 var boundGreet = greet.bind(obj);
-
 console.log(boundGreet('Hello')); // 输出: John says Hello
