@@ -1,15 +1,22 @@
-function myBind(context) {
-    // 把参数伪数组转换为数组
-    let augumentsArr = Array.prototype.slice.call(arguments)
-    // 获取参数部分
-    let args = augumentsArr.slice(1)
-    // 记录this
-    let self = this
-    // 返回函数
-    return function (){
-        // 获取参数
-        let newArgs = Array.prototype.slice.call(arguments)
-        // 合并参数调用
-        self.apply(context, args.concat(newArgs))
-    }
+if (!Function.prototype.bind) {
+    Function.prototype.bind = function(context) {
+        var self = this; // 保存原函数
+        console.log('self', self)
+        return function() {
+            // 返回一个新函数，当被调用时，这个新函数将执行原函数，并传递所有参数
+            return self.apply(context, arguments);
+        };
+    };
 }
+
+// 使用示例
+function greet(greeting) {
+    return this.name + ' says ' + greeting;
+}
+
+var obj = {
+    name: 'John'
+};
+
+var boundGreet = greet.bind(obj);
+console.log(boundGreet('Hello')); // 输出: John says Hello
