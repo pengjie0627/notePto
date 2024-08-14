@@ -1,5 +1,5 @@
 1、vuex是什么？
-Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式
+Vuex 是一个专为 Vue.js 应用程序开发的状态管理插件
 2、怎么使用？
 【1】安装vuex依赖
 【2】引入vuex
@@ -8,7 +8,7 @@ Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式
 【5】定义state,mutation,action,getter
 【6】在main.js中引入并传入到Vue的options中去
 【7】通过this.$store.state.xxx获取变量
-【8】通过this.$store.getter.xxx获取getter
+【8】通过this.$store.getter.xxx获取getter下的方法
 【9】通过this.$store.dispatch('xxx')调用action
 【10】通过this.$store.commit('xxx')调用mutation
 3、哪种功能场景使用它？

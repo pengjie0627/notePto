@@ -23,7 +23,7 @@ diff算法的核心原理是递归+双指针，具体如下：
             let dom = createElement(newVnode.children[i])
             oldVnode.el.appendChild(dom)
           }
-    【3】、老的虚拟节点有子节点，新的虚拟节点也有子节点，则又分为2中情况：
+    【3】、老的虚拟节点有子节点，新的虚拟节点也有子节点，则又分为2种情况：
          (1)、子节点都是文本节点，则用新的虚拟节点的text属性替换掉老的虚拟节点上的el.innerText,
               即oldVnode.el.innerText = newVnode.text
          (2)、子节点都不都是文本内容，则进行递归+双指针的方式去对比，对比如下：

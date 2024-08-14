@@ -9,10 +9,8 @@ export default function install(Vue){
             if (this.$options.router) { // 如果存在说明是根实例
                 this._routerRoot = this // 在this上添加一个变量，记录一下根实例
                 this._router = this.$options.router // 在this上添加一个变量记录下router实例
-
                 this._router.init(this) // 初始化,这里的this是根实例，也就是main.js中的那个
-
-                // 在根实例上顶一个响应式对象_route,值为路由实例对象的current的值
+                // 在根实例上定一个响应式对象_route,值为路由实例对象的current的值
                 Vue.util.defineReactive(this, '_route', this._router.history.current)
             } else {
                 // 不存在就去找父实例上的，如果父实例中有的话
