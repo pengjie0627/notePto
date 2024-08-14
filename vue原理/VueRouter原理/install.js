@@ -24,7 +24,6 @@ export default function install(Vue){
             return this._routerRoot._route
         }
     })
-
     // 为了能够让所有vue实例能够拿到路由实例对象，就把路由实例对象放在了原型上叫做$router
     Object.defineProperties(Vue.prototype, '$router', {
         get() {
