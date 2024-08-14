@@ -80,7 +80,7 @@ callbacks.push(() => {
       }
     
 ```
-上面的flushCallbacks其实就是对之前callbacks收集的回调函数就行遍历调用，代码如下：
+上面的flushCallbacks其实就是对之前callbacks收集的回调函数进行遍历调用，代码如下：
 ```
     function flushCallbacks () {
         pending = false

@@ -7,8 +7,8 @@ export default function install(Vue){
         beforeCreate() {
             // 为每一个Vue实例添加_routerRoot，以后每个vue实例都可以通过this._routerRoot._router访问到Router实例
             if (this.$options.router) { // 如果存在说明是根实例
-                this._routerRoot = this // 在this上添加一个变量，记录一下根实例
-                this._router = this.$options.router // 在this上添加一个变量记录下router实例
+                this._routerRoot = this // 在this上添加一个变量_routerRoot，记录一下根实例
+                this._router = this.$options.router // 在this上添加一个变量_router记录下router实例
                 this._router.init(this) // 初始化,这里的this是根实例，也就是main.js中的那个
                 // 在根实例上定一个响应式对象_route,值为路由实例对象的current的值
                 Vue.util.defineReactive(this, '_route', this._router.history.current)
