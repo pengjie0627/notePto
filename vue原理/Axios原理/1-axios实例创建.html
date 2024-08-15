@@ -37,17 +37,17 @@
         function createInstance(config){
             //实例化一个对象
             let context = new Axios(config);// context.get()  context.post()  但是不能当做函数使用 context() X
-            //创建请求函数
-            let instance = Axios.prototype.request.bind(context);// instance 是一个函数 并且可以 instance({})  此时 instance 不能 instance.get X
-            //将 Axios.prototype 对象中的方法添加到instance函数对象中
-            Object.keys(Axios.prototype).forEach(key => {
-                instance[key] = Axios.prototype[key].bind(context);// this.default  this.interceptors
-            });
-            //为 instance 函数对象添加属性 default 与 interceptors
-            Object.keys(context).forEach(key => {
-                instance[key] = context[key];
-            });
-            return instance;
+            // //创建请求函数
+            // let instance = Axios.prototype.request.bind(context);// instance 是一个函数 并且可以 instance({})  此时 instance 不能 instance.get X
+            // //将 Axios.prototype 对象中的方法添加到instance函数对象中
+            // Object.keys(Axios.prototype).forEach(key => {
+            //     instance[key] = Axios.prototype[key].bind(context);// this.default  this.interceptors
+            // });
+            // //为 instance 函数对象添加属性 default 与 interceptors
+            // Object.keys(context).forEach(key => {
+            //     instance[key] = context[key];
+            // });
+            return context;
         }
 
         let axios = createInstance();
