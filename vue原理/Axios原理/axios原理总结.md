@@ -19,7 +19,6 @@ axios的功能：
 6、adapter根据类型判断是调用xhrAdapter还是httpAdapter
 7、获取请求结果，进行响应拦截，以及进行json转换，然后返回给客户端
 
-
 axios中cancelToken的原理：
 ```
 【1】定义有参CancelToken(executor)构造函数接受executor参数,函数内部定义变量promise并创建Promise和记录Promise中resolve的resolvePromise变量,
