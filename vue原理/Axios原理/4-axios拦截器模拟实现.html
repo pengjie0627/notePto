@@ -25,7 +25,7 @@
             //处理拦截器
             //请求拦截器 将请求拦截器的回调 压入到 chains 的前面  request.handles = []
             this.interceptors.request.handlers.forEach(item => {
-                chains.unshift(item.fulfilled, item.rejected);
+                chains.unshift(item.fulfilled, item.rejected); // let arr= ['a','b']; arr.unshift('c','d');   arr = ['c','d','a','b'];
             });
             //响应拦截器
             this.interceptors.response.handlers.forEach(item => {
@@ -57,7 +57,7 @@
         //创建实例
         let context = new Axios({});
         //创建axios函数
-        let axios = Axios.prototype.request.bind(context);
+        let axios = Axios.prototype.request.bind(context); // 在js中，bind会新返回一个方法，这句话的意思就是让axios变成和request一样的方法，但是绑定了上下文context
         //将 context 属性 config interceptors 添加至 axios 函数对象身上
         Object.keys(context).forEach(key => {
             axios[key] = context[key];
