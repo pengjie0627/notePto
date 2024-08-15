@@ -91,6 +91,7 @@ callbacks.push(() => {
     }
 }
 ```
+
 4、由于浏览器的运行机制，Promise和MutationObserver会被加入到微任务队列，
 setImmediate和setTimeout会被加入到宏任务队列。无论是微任务还是宏任务，
 都会在代码最后执行。只不过微任务比宏任务有着更高的优先级。这样，就保证了dom
