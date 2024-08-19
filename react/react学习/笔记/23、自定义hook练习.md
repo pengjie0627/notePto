@@ -1,7 +1,7 @@
 1、自定义useWindowScroll
 ```
     /**
-     * 获取滚动条举例顶部的高度
+     * 获取滚动条距离顶部的高度
      * @returns {{height: *}}
      * @constructor
      */
