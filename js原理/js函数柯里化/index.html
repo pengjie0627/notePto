@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // add(4,5,6)、add(4)(5,6),add(4,5)(6)、add(4)(5)(6)
+    // 1、确认要柯里化的函数
+    const fn = function (x,y,z){
+        return x+y+z;
+    }
+
+
+    // 3、确定实现方式
+    function curryFn(cb) {
+        return function curry(...args1){
+            if (cb.length === args1.length) {
+                return cb.apply(null, arguments)
+            } else {
+                return function (...args2){
+                    return curry(...args1,...args2)
+                }
+            }
+        }
+    }
+
+    // 2、确认调用方式
+    const add = curryFn(fn);
+    // console.log(add(4,5,6))
+    // console.log(add(4)(5,6))
+    // console.log(add(4,5)(6))
+    console.log(add(4)(5)(6))
+</script>
+</body>
+</html>

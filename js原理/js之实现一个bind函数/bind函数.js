@@ -4,6 +4,8 @@ if (!Function.prototype.bind) {
         console.log('self', self)
         return function() {
             // 返回一个新函数，当被调用时，这个新函数将执行原函数，并传递所有参数
+            debugger
+            console.log('arguments=', arguments);
             return self.apply(context, arguments);
         };
     };
@@ -11,6 +13,7 @@ if (!Function.prototype.bind) {
 
 // 使用示例
 function greet(greeting) {
+    console.log('greeting=', greeting);
     return this.name + ' says ' + greeting;
 }
 var obj = {
