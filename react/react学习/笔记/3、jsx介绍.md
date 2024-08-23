@@ -1,6 +1,6 @@
 1、什么是JSX？
 ```
-    JSX是javascript XML的缩写，表示在js代码中书协HTML结构
+    JSX是javascript XML的缩写，表示在js代码中书写HTML结构
 ```
 2、JSX作用？
 ```
@@ -13,5 +13,5 @@
 ```
 
 注意：JSX并不是一个标准的js语法，是JS的扩展，浏览器是不认识的。
-所以，脚手架中内种的@babel/plugin-transform-react-jsx包，用来解析
+所以，脚手架中内置的@babel/plugin-transform-react-jsx包，用来解析
 该语法
