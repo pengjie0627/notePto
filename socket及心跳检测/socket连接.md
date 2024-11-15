@@ -27,5 +27,10 @@
 ```
 2、如何检测socket是否断开连接？
 ```
-    js中可以做一个轮询，比如每隔5分钟做一个接口调用，用来查询socket是否连接正常
+    // 定期检查连接状态
+        setInterval(function() {
+          if (socket.readyState === WebSocket.CLOSED || socket.readyState === WebSocket.CLOSING) {
+            console.log('Socket is closed or in the process of closing');
+          }
+        }, 1000);
 ```
