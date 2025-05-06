@@ -89,7 +89,6 @@ callbacks.push(() => {
         for (let i = 0; i < copies.length; i++) {
         copies[i]()
     }
-}
 ```
 
 4、由于浏览器的运行机制，Promise和MutationObserver会被加入到微任务队列，

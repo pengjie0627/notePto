@@ -9,7 +9,7 @@ BFC是块级格式化上下文，就是形成独立的区域，内部的元素�
 【5】BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素
 3、形成BFC的方式？
 【1】浮动元素，float: 不是none
-【2】绝对定位元素，position:是absolute是fixed
+【2】绝对定位元素，position:不是absolute不是fixed
 【3】块级元素：overflow不是visible
 【4】display:inline-block
     display:inline-flex
