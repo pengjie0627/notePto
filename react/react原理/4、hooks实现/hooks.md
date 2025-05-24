@@ -2,7 +2,6 @@
 ```
 Hooks 是 React 16.8 版本引入的一个新特性，旨在解决在函数组件中使用状态（state）和生命周期方法（lifecycles）等功能的限制
 ```
-
 2、hooks原理?
 ```
 React Hooks 的实现依赖于几个关键的技术点：
