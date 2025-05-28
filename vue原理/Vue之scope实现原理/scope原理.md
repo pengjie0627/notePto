@@ -1,4 +1,4 @@
-Scope 的本质是基于 HTML 和 CSS 属性选择器，即分别给 HTML 标签和 CSS 选择器添加data-v-xxx；
+Scope 的本质是基于 HTML 和 CSS 属性选择器，即分别给 HTML 标签和 CSS 选择器添加data-v-[hash]；
 具体来说，它是通过 vue-loader 实现的，实现过程大致分 3 步：
 
 ```
